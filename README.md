@@ -1,27 +1,27 @@
-# 🛡️ ShadowShield - Outil de Cybersécurité Tout-en-Un
+# 🛡️ ShadowShield - أداة الأمن السيبراني المتكاملة
 
-ShadowShield est un outil open-source qui offre **une protection complète** en intégrant **l'anonymat, la détection des menaces et le chiffrement avancé**.
+ShadowShield هي أداة مفتوحة المصدر توفر **حماية متكاملة** عبر **إخفاء الهوية، كشف التهديدات، والتشفير القوي**.
 
-## 🚀 Fonctionnalités Principales :
-✅ **Masquage de l'adresse MAC et IP via VPN et Tor**  
-✅ **Analyse et camouflage de l'empreinte numérique**  
-✅ **Générateur d'identités numériques fictives (noms, cartes, téléphones, adresses)**  
-✅ **Pare-feu (Firewall) et système de détection d'intrusions (IDS) intégrés**  
-✅ **Analyse du réseau pour détecter les attaques**  
-✅ **Chiffrement avancé des données avec AES-256 et RSA-4096**  
-✅ **Contrôle à distance via un Bot Telegram**  
-✅ **Interface Graphique (GUI) pour une utilisation simplifiée**  
+## 🚀 الميزات الرئيسية:
+✅ **إخفاء MAC Address و IP Address باستخدام VPN وTor**  
+✅ **تحليل البصمة الرقمية وإخفاؤها لمنع التتبع**  
+✅ **مولد هويات رقمية مزيفة (أسماء، بطاقات، أرقام هواتف وهمية)**  
+✅ **جدار ناري (Firewall) ونظام كشف الاختراق (IDS) للحماية**  
+✅ **تحليل سلوك الشبكة واكتشاف الهجمات**  
+✅ **تشفير البيانات باستخدام AES-256 + RSA-4096**  
+✅ **تحكم عن بُعد عبر Telegram Bot**  
+✅ **واجهة رسومية GUI لسهولة الاستخدام**  
 
-## 🛠️ Installation :
+## 🛠️ طريقة التثبيت:
 ```bash
 pip install -r requirements.txt
 python setup.py install
 ```
 
-## 🏃 Exécution :
+## 🏃 كيفية التشغيل:
 ```bash
 python main.py
 ```
 
-## 📜 Licence :
-ShadowShield est sous licence **MIT License**.
+## 📜 الرخصة:
+ShadowShield مرخص تحت **MIT License**.

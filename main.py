@@ -4,26 +4,26 @@ from core.encryption import encrypt_message, decrypt_message
 from core.firewall import activate_firewall
 
 def main():
-    print("🛡️ Bienvenue sur ShadowShield - Outil de Protection Avancée")
+    print("🛡️ مرحبًا بك في ShadowShield - أداة الأمان المتكاملة")
 
-    # Activation du pare-feu
+    # تشغيل الجدار الناري
     activate_firewall()
 
-    # Masquage de l'adresse MAC
+    # إخفاء MAC Address
     new_mac = change_mac()
-    print(f"✅ Adresse MAC modifiée : {new_mac}")
+    print(f"✅ تم تغيير MAC Address إلى: {new_mac}")
 
-    # Changement de l'adresse IP via Tor
+    # تغيير IP Address عبر Tor
     proxy = change_ip()
-    print(f"✅ Adresse IP modifiée via Tor : {proxy}")
+    print(f"✅ تم تغيير IP Address إلى: {proxy}")
 
-    # Test du chiffrement
-    message = input("🔑 Entrez un message à chiffrer : ")
+    # تجربة التشفير
+    message = input("🔑 أدخل النص لتشفيره: ")
     encrypted = encrypt_message(message)
-    print(f"🔒 Message chiffré : {encrypted}")
+    print(f"🔒 النص المشفر: {encrypted}")
 
     decrypted = decrypt_message(encrypted)
-    print(f"🔓 Message déchiffré : {decrypted}")
+    print(f"🔓 النص بعد فك التشفير: {decrypted}")
 
 if __name__ == "__main__":
     main()
