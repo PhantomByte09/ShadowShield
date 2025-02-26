@@ -1,37 +1,25 @@
 import os
-from cryptography.fernet import Fernet
+from core.anonymizer import change_mac, change_ip
+from core.encryption import encrypt_message, decrypt_message
 
-# إنشاء مفتاح تشفير AES
-def generate_key():
-    key = Fernet.generate_key()
-    with open("key.key", "wb") as key_file:
-        key_file.write(key)
-
-# تحميل مفتاح التشفير
-def load_key():
-    return open("key.key", "rb").read()
-
-# تشفير النصوص
-def encrypt_message(message, key):
-    cipher = Fernet(key)
-    encrypted_message = cipher.encrypt(message.encode())
-    return encrypted_message
-
-# فك تشفير النصوص
-def decrypt_message(encrypted_message, key):
-    cipher = Fernet(key)
-    decrypted_message = cipher.decrypt(encrypted_message).decode()
-    return decrypted_message
-
-if __name__ == "__main__":
-    if not os.path.exists("key.key"):
-        generate_key()
-
-    key = load_key()
+def main():
+    print("🛡️ مرحبًا بك في ShadowShield - أداة الأمان المتكاملة")
     
+    # إخفاء MAC Address
+    new_mac = change_mac()
+    print(f"✅ تم تغيير MAC Address إلى: {new_mac}")
+
+    # تغيير IP Address عبر Tor
+    proxy = change_ip()
+    print(f"✅ تم تغيير IP Address إلى: {proxy}")
+
+    # تجربة التشفير
     message = input("🔑 أدخل النص لتشفيره: ")
-    encrypted = encrypt_message(message, key)
+    encrypted = encrypt_message(message)
     print(f"🔒 النص المشفر: {encrypted}")
 
-    decrypted = decrypt_message(encrypted, key)
+    decrypted = decrypt_message(encrypted)
     print(f"🔓 النص بعد فك التشفير: {decrypted}")
+
+if __name__ == "__main__":
+    main()
