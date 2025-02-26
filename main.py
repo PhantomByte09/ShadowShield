@@ -1,10 +1,14 @@
 import os
 from core.anonymizer import change_mac, change_ip
 from core.encryption import encrypt_message, decrypt_message
+from core.firewall import activate_firewall
 
 def main():
     print("🛡️ مرحبًا بك في ShadowShield - أداة الأمان المتكاملة")
-    
+
+    # تشغيل الجدار الناري
+    activate_firewall()
+
     # إخفاء MAC Address
     new_mac = change_mac()
     print(f"✅ تم تغيير MAC Address إلى: {new_mac}")
